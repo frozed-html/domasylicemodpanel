@@ -38,3 +38,43 @@ document.addEventListener('DOMContentLoaded', function() {
   // Aktivace první záložky po načtení stránky
   document.getElementById('tabBans').click();
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+  // Načteme seznam uživatelů, pokud nějaké existují v localStorage
+  const userList = JSON.parse(localStorage.getItem('users')) || [];
+  const userListElement = document.getElementById('userList');
+  
+  // Funkce pro zobrazení uživatelů
+  function displayUsers() {
+    userListElement.innerHTML = '';
+    userList.forEach(user => {
+      const li = document.createElement('li');
+      li.textContent = `${user.username} - Role: ${user.role}`;
+      userListElement.appendChild(li);
+    });
+  }
+
+  // Inicializace zobrazení uživatelů
+  displayUsers();
+
+  // Přidání nového uživatele
+  document.getElementById('createUserForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const username = document.getElementById('username').value;
+    const role = document.getElementById('role').value;
+
+    // Přidání nového uživatele do pole
+    const newUser = { username, role };
+    userList.push(newUser);
+
+    // Uložení do localStorage
+    localStorage.setItem('users', JSON.stringify(userList));
+
+    // Obnovení seznamu uživatelů na stránce
+    displayUsers();
+
+    // Vyprázdnění formuláře
+    document.getElementById('createUserForm').reset();
+  });
+});
