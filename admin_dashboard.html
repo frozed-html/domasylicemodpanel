@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Panel - Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="admin-container">
+    <header>
+      <h1>Admin Panel</h1>
+      <nav>
+        <ul class="tabs">
+          <li class="tab" id="tabBans">Bany</li>
+          <li class="tab" id="tabLogs">Logs</li>
+          <li class="tab" id="tabSettings">Nastavení</li>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="content">
+      <div id="bans" class="tab-content">
+        <h2>Bany</h2>
+        <p>Zde můžete spravovat hráče, kteří jsou banováni.</p>
+        <!-- Přidejte zde obsah pro Bany -->
+      </div>
+
+      <div id="logs" class="tab-content" style="display: none;">
+        <h2>Logs</h2>
+        <p>Zde si můžete prohlížet logy aktivit na serveru.</p>
+        <!-- Přidejte zde obsah pro Logs -->
+      </div>
+
+      <div id="settings" class="tab-content" style="display: none;">
+        <h2>Nastavení</h2>
+        <p>Zde můžete upravit nastavení admin panelu.</p>
+        <!-- Přidejte zde obsah pro Nastavení -->
+      </div>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
