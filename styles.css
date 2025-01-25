@@ -65,3 +65,44 @@ button:hover {
   font-size: 14px;
   margin-top: 10px;
 }
+
+
+.tabs {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.tab {
+  padding: 10px 20px;
+  margin: 0 10px;
+  cursor: pointer;
+  background-color: #f4f4f4;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.tab:hover {
+  background-color: #ddd;
+}
+
+.tab.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.tab-content {
+  display: none;
+}
+
+#content {
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  margin-bottom: 15px;
+}
