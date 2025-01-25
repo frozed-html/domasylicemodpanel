@@ -11,3 +11,29 @@ document.getElementById("loginForm").addEventListener("submit", function(event) 
     document.getElementById("errorMessage").innerText = "Neplatné uživatelské jméno nebo heslo.";
   }
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+  // Inicializace záložek
+  const tabs = document.querySelectorAll('.tab');
+  const tabContents = document.querySelectorAll('.tab-content');
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      // Skrytí všech záložek
+      tabContents.forEach(content => content.style.display = 'none');
+
+      // Odebrání třídy "active" ze všech záložek
+      tabs.forEach(tab => tab.classList.remove('active'));
+
+      // Zobrazení aktuální záložky
+      const contentId = tab.id.replace('tab', '').toLowerCase();
+      document.getElementById(contentId).style.display = 'block';
+
+      // Přidání třídy "active" k aktuální záložce
+      tab.classList.add('active');
+    });
+  });
+
+  // Aktivace první záložky po načtení stránky
+  document.getElementById('tabBans').click();
+});
