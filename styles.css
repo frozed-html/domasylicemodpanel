@@ -67,6 +67,8 @@ button:hover {
 }
 
 
+/* Předchozí CSS */
+
 .tabs {
   list-style: none;
   display: flex;
@@ -105,4 +107,30 @@ button:hover {
 
 h2 {
   margin-bottom: 15px;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+li {
+  margin: 5px 0;
+}
+
+form {
+  margin-top: 20px;
 }
