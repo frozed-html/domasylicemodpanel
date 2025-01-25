@@ -5,12 +5,13 @@ document.getElementById("loginForm").addEventListener("submit", function(event) 
   const password = document.getElementById("password").value;
 
   if (username === "admin" && password === "admin123") {
-    // Přesměrování na další stránku po úspěšném přihlášení
-    window.location.href = "admin_dashboard.html"; // Změňte URL podle potřeby
+    // Přesměrování na admin panel po úspěšném přihlášení
+    window.location.href = "admin_dashboard.html";  // Ujistěte se, že soubor admin_dashboard.html existuje
   } else {
     document.getElementById("errorMessage").innerText = "Neplatné uživatelské jméno nebo heslo.";
   }
 });
+
 
 document.addEventListener('DOMContentLoaded', function() {
   // Inicializace záložek
